@@ -11,6 +11,7 @@ static void ms_substed_func(int elem_start, int *cur_1_num, int *cur_score);
 static int ms_substed_subtraction_fill(const int elem);
 static void ms_substed_cp(_Bool dst[X*X], _Bool src[X*X]);
 static void ms_substed_output(int cur_score);
+static void ms_substed_print();
 
 void ms_substed_main()
 {
@@ -170,14 +171,22 @@ static int ms_substed_subtraction_fill(const int elem)
 
 static void ms_substed_output(int score)
 {
-	int i;
 	
 	printf("ms_substed:");
+	ms_substed_print();
+
+	printf("score: %d\n", score);
+
+	return;
+}
+
+static void ms_substed_print()
+{
+	int i;
+
 	for(i=0; i<X*X; i++)
 		printf(" %d", ms_substed[i]?1:0);
 	putchar('\n');
-
-	printf("score: %d\n", score);
 
 	return;
 }
