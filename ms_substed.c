@@ -88,7 +88,7 @@ static int ms_substed_subtraction_fill(const int elem)
 
 	/* the horizontal line on which elem is */
 	f=0;
-	for(i=((int)(elem/X))*X; i<elem/X+X; i++)
+	for(i=((int)(elem/X))*X; i<((int)(elem/X))*X+X; i++)
 		if(!ms_substed[i]){
 			if(!f)
 				/* found 1 empty mass so far so save the element */
